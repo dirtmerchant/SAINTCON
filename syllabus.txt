@@ -39,9 +39,37 @@ Vagrant and Ansible
  -ls -l /vagrant/examples
  -ansible --version
  -ssh web1
+
+*Ad-hoc commands
  -ansible web1 -m ping
+ - --ask-pass
  -ssh-keyscan web1
  -ssh-keyscan lb web1 web2 >> .ssh/known_hosts
  -cat inventory.ini
  -ansible all -m ping --ask-pass
  -ansible all -m ping
+
+*Playbooks
+ -ssh-keygen -t rsa -b 2048
+ -view ssh-addkey.yml
+ -ansible-playbook ssh-addkey.yml --ask-pass
+
+*More ad-hoc commands
+ -ansible all -m shell -a "uname -a"
+ -ansible web -m shell -a "/sbin/reboot"
+  +compliance timesaver
+
+*NTP playbook
+
+ -Ad-hoc
+  +ansible web1 -m apt -a "name=ntp state=installed"
+  +ansible web1 -m apt -a "name=ntp state=installed" --sudo
+
+ -Playbook
+  +ansible-playbook ntp-install.yml
+  +ansible-playbook ntp-remove.yml
+
+*Install Load Balancer and NGiNX
+ -provision 3 additional web servers
+ -deploy site.yml
+ -correct the bug

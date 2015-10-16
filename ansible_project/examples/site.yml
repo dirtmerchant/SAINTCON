@@ -32,7 +32,7 @@
 
   handlers:
 
-  - name: restarts nginx
+  - name: restart nginx
     service: name=nginx state=restarted
 
 # lb
@@ -57,5 +57,5 @@
 
   handlers:
 
-  - name: restarts haproxy
+  - name: restart haproxy
     service: name=haproxy state=restarted
