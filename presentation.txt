@@ -1,0 +1,35 @@
+Introduction to Configuration Management
+Ansible and Vagrant
+
+*What is Ansible?
+ -http://www.ansible.com
+*What is Vagrant?
+ -https://www.vagrantup.com
+
+*Prepare the environment
+ -xcode-select –install
+ -ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+ -brew doctor
+ -brew install caskroom/cask/brew-cask
+ -brew cask install virtualbox
+ -brew cask install vagrant
+ -brew cask install vagrant-manager
+
+*Configure Vagrant
+ -project1 directory
+ -vagrant init
+ -edit Vagrantfile
+  +box name
+  +forwarded port
+  +shell script
+ -Demo vagrant up & vagrant status
+
+*Vagrant work flow discussion
+ -Virtualbox is our underlying hypervisor
+ -Vagrant manages VM creation via Vagrantfile
+  +Demo provision option
+
+*Install Ansible
+ -simple playbook
+ -rolling upgrade playbook
+
