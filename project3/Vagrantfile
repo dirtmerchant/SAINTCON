@@ -5,7 +5,7 @@
 
 Vagrant.configure("2") do |config|
 
-  # create mgmt node
+  # creates mgmt node
   config.vm.define :mgmt do |mgmt_config|
       mgmt_config.vm.box = "ubuntu/trusty64"
       mgmt_config.vm.hostname = "mgmt"
@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
       mgmt_config.vm.provision :shell, path: "bootstrap-mgmt.sh"
   end
 
-  # create load balancer
+  # creates load balancer
   config.vm.define :lb do |lb_config|
       lb_config.vm.box = "ubuntu/trusty64"
       lb_config.vm.hostname = "lb"
@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
       end
   end
 
-  # create some web servers
+  # creates some web servers
   # https://docs.vagrantup.com/v2/vagrantfile/tips.html
   (1..3).each do |i|
     config.vm.define "web#{i}" do |node|
