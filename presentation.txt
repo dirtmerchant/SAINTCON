@@ -16,13 +16,17 @@ Ansible and Vagrant
  -brew cask install vagrant-manager
 
 *Configure Vagrant
- -project1 directory
+ -vagrant_project directory
  -vagrant init
  -edit Vagrantfile
   +box name
   +forwarded port
   +shell script
- -Demo vagrant up & vagrant status
+ -vagrant up
+ -vagrant status
+ -vagrant ssh web
+ -vagrant destroy
+
 
 *Vagrant work flow discussion
  -Virtualbox is our underlying hypervisor
@@ -32,4 +36,3 @@ Ansible and Vagrant
 *Install Ansible
  -simple playbook
  -rolling upgrade playbook
-
