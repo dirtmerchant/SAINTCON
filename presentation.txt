@@ -1,21 +1,19 @@
 Introduction to Configuration Management
-Ansible and Vagrant
+Vagrant and Ansible
+
+*What is Vagrant?
+ -https://www.vagrantup.com
+  +Frontend to Hypervisor, but more
+  +Development VMs as code
 
 *What is Ansible?
  -http://www.ansible.com
-*What is Vagrant?
- -https://www.vagrantup.com
+  +The manual problem
+  +Cofiguration as code
+  +Playbooks
+  +Inventory files
 
-*Prepare the environment
- -xcode-select –install
- -ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
- -brew doctor
- -brew install caskroom/cask/brew-cask
- -brew cask install virtualbox
- -brew cask install vagrant
- -brew cask install vagrant-manager
-
-*Configure Vagrant
+*Vagrant
  -vagrant_project directory
  -vagrant init
  -edit Vagrantfile
@@ -29,12 +27,21 @@ Ansible and Vagrant
  -vagrant ssh default
  -vagrant destroy
 
-
-*Vagrant work flow discussion
- -Virtualbox is our underlying hypervisor
- -Vagrant manages VM creation via Vagrantfile
-  +Demo provision option
-
-*Install Ansible
- -simple playbook
- -rolling upgrade playbook
+*Ansible
+ -Vagrantfile
+  +Mgmt server
+   =bootstrap.sh
+  +Load balancer
+  +Multiple web servers
+ -vagrant up
+ -vagrant status
+ -vagrant ssh mgmt
+ -ls -l /vagrant/examples
+ -ansible --version
+ -ssh web1
+ -ansible web1 -m ping
+ -ssh-keyscan web1
+ -ssh-keyscan lb web1 web2 >> .ssh/known_hosts
+ -cat inventory.ini
+ -ansible all -m ping --ask-pass
+ -ansible all -m ping
