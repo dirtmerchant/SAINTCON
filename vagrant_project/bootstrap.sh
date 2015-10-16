@@ -12,8 +12,3 @@ fi
 
 # restart apache
 /usr/sbin/service apache2 restart
-
-# demo
-# apt-get install -y fortune 
-# /usr/games/fortune > /var/www/html/fortune.html
-# /usr/bin/uptime >  /var/www/html/uptime.html

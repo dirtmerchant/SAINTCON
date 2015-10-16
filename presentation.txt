@@ -24,7 +24,9 @@ Ansible and Vagrant
   +shell script
  -vagrant up
  -vagrant status
- -vagrant ssh web
+ -bootstrap.sh
+ -html directory
+ -vagrant ssh default
  -vagrant destroy
 
 
