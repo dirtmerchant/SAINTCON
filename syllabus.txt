@@ -9,9 +9,10 @@ Vagrant and Ansible
 *What is Ansible?
  -http://www.ansible.com
   +The manual problem
-  +Cofiguration as code
-  +Playbooks
+  +Configuration as code
+  +Ad hoc commands
   +Inventory files
+  +Playbooks
 
 *Vagrant
  -vagrant_project directory
